@@ -9,13 +9,19 @@
 border: 1px solid #222;
 padding: 10px;
 
-background-color: slateblue;}
+}
 
  /* after div target first h3 */       
-div + h3{
+div ~ p{
 color: #fff;
 background-color: royalblue;
+padding: 10px;
+}
+div ~ h3{
 
+    color: #fff;
+background-color: goldenrod;
+padding: 10px;
 }
 
 
@@ -23,14 +29,15 @@ background-color: royalblue;
     </style>
 </head>
 <body>
- <h1>element + element ( adjecent combinator)</h1>
+ <h1>element ~ element  ( general sibling combinator)</h1>
+ <!-- it targeet all child after the parent -->
  <h3> sample heading</h3>  
  <p>outer pragraph</p> 
  <div>
 <h3> css tittle here</h3>
 <p> this is prabhat kumar singh my name is prabhat kumar</p>
 <section>
-<h3>this is selection <title></title></h3>
+<h3>this is selection tittle</h3>
 <p>this is prabhat kumar</p>
 
 
@@ -38,8 +45,11 @@ background-color: royalblue;
 
 
  </div>
+ <p> this is prabhat kumar singh</p>
+ <p> this is prabhat kumar singh</p>
+<p>how are you bro i am fine </p>
+<h3> this is prabhat kumar singh</h3>
  <h3> this is prabhat kumar singh</h3>
- <h3> this is prabhat kumar singh</h3>
-
+<h3>how are you bro i am fine </h3>
 </body>
 </html>
