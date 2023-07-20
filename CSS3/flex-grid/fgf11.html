@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+display: grid;
+grid-template-areas: 
+"topH topH ads" " sidenav mainbody ads"" btmF BTMf btmF";
+grid-gap: 10px;
+grid-template-rows: 80px 1fr 80px;
+grid-template-columns: 15fr 1fr 10%;
+height: 100vh;
+
+}
+header,footer,nav, aside,article{
+background-color: gold;
+
+
+
+
+}
+#topH{
+
+    grid-area: topH;
+
+}
+#mainbody{ grid-area: mainbody;}
+#sidenav{ grid-area: sidenav;}
+#ads{ grid-area: ads;}
+#bottomFoot{ grid-area: btmF;}
+
+
+    </style>
+</head>
+<body>
+ <header id="topH">
+
+    <h1>Tittle top header</h1>
+
+ </header>   
+ <article id="mainbody">
+<p> this oqiwshqiohsqwikb hiAXHIKax AXHIaxhihilqs LIhio qshio   qdhil   qs qwhliqwhioqdwhioqwd hilqhioh qs</p>
+
+
+ </article>
+ <nav id="sidenav">
+    <p>side nav</p>
+ </nav>
+ <aside id="ads">
+    <p>side ads</p>
+ </aside>
+ <footer id="bottomfoot"><p>all right reserved</p></footer>
+</body>
+</html>

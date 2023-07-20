@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+
+
+
+
+
+    box-sizing: border-box;
+}
+body{
+
+padding: 0;
+margin: 0;
+background: #ccc;
+
+
+
+}
+
+h1{
+text-align: center;
+
+
+
+
+}
+.contact{
+
+
+background-color: #ccc;
+width: 50vw;
+display: grid;
+padding: 1em;
+margin: auto;
+grid-template-columns: [x] auto[y] 1fr;
+grid-gap: 10px;
+
+
+}
+.contact label{
+
+grid-column: x;
+grid-row: auto;
+position: relative;
+top: 15px;
+
+
+
+}
+.contact input{
+
+in
+
+
+}
+
+    </style>
+</head>
+<body>
+  <h1> grid in form</h1>  
+  <form action="" class="contact">
+<label for="name">name</label>
+<input type="text" name="name" id="name">
+
+<label for="email">email</label>
+<input type="email" name="email" id="email" placeholder="sample@gmail.crimson" required>
+
+<label for="mobile">mobile</label>
+<input type="mobile" name="mobile" id="mobile">
+
+
+
+  </form>
+</body>
+</html>
