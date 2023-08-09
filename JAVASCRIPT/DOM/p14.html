@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+.box{
+
+
+
+    width: 100px;
+    height: 50px;
+    background-color: #44ff33;
+
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h3>query selector all</h3>
+    <button onclick="clickme()">clickme</button>
+    <section>
+      <section id="1" class="box"></section>
+      <section id="2" class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section>
+    </section>
+    <script>
+function clickme(){
+
+
+
+
+    let selbox=document.querySelectorAll(".box");
+    console.log('total boxes=',selbox)
+
+    for(i=0;i<selbox.length; i++){
+
+selbox[i].style.backgroundColour="orangered"
+
+
+    }
+}
+
+    </script>
+  </body>
+</html>

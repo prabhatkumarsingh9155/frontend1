@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>document.cookies</h1>
+    <button onclick="set()">set cookies</button>
+    <script>
+      function set() {
+        var x = prompt("enter ypur input");
+        document.cookie = `userid=${x}; expires=5 AUG 2023 12:00:00 AM GMT+5.30`;
+        alert("cookie succesfully set");
+        window.location.reload(); /*refresing current page*/
+      }
+
+      // self trigger function
+      (function () {
+        console.log(document.cookie); // string
+      })();
+    </script>
+  </body>
+</html>

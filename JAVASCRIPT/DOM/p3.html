@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="blk"></section>
+    <button onclick="addcontent()">Add Block</button>
+    <script>
+      function addcontent() {
+        var content = `<div>
+          
+          <h1>my name is prabhat</h1>
+          <button onclick="op()">remove</button>
+          
+          </div>`
+document.getElementById('blk').innerHTML=content
+      }
+
+      function op(){
+        document.getElementById('blk').innerHTML=""
+
+
+
+      }
+    </script>
+  </body>
+</html>

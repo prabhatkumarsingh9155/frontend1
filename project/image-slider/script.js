@@ -6,7 +6,7 @@ item.addEventListener('click',() =>{
 removeActiveClass();
 item.classList.add("active");
 
-
+  
 
 });
 

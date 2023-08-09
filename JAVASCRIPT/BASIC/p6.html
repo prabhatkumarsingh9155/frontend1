@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>use switch key = add, sub, mul,div,rem a and b</h1>
+    <button onclick="codehandler()">excute here</button>
+    <script>
+      function codehandler() {
+        var key = prompt("enter any one an opertion add,sub,mul,div,rem");
+        var a = prompt("enter values of a?");
+        var b = prompt("enter value of b?");
+        var x = Number(a);
+        var y = Number(b);
+        var res = 0;
+
+        switch (key) {
+          case "add":
+            res = x + y;
+            document.write(`<h1> addition of two number${res} </h1>`);
+            break;
+          case "sub":
+            res = x - y;
+            document.write(`<h1> sub of two number${res} </h1>`);
+            break;
+
+          case "mul":
+            res = x * y;
+            document.write(`<h1> mul of two number${res}</h1>`);
+            break;
+          case "div":
+            if (X > y) {
+              res = x / y;
+            } else {
+              res = y / x;
+            }
+            document.write(`<h1> div of 2 number${res}</h1>`);
+            break;
+          case "mod":
+            if (x > y) {
+              res = x % y;
+            } else {
+              res = y % x;
+            }
+            document.write(`<h1> modulo of 2 number${res} </h1>`);
+            break;
+          default:
+            document.write("<h1> choose proper operation");
+        }
+      }
+    </script>
+  </body>
+</html>

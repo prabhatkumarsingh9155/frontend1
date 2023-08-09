@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>reminder of 2 numbers</h1>
+    <button onclick="submitHandler()">submit</button>
+    <div id="result"></div>
+    <script>
+function submitHandler(){
+
+    var x =window.prompt('enter input 1?')
+    var y =prompt('enter input 1?')
+console.log(`<h1> ${x}${y} </h1>`)
+let res=Number(x)%Number(y);
+document.getElementById("result").innerHTML=`<h1> rem of x%y=${res}</h1>`
+}
+ 
+
+
+
+
+
+    </script>
+  </body>
+</html>

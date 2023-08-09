@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>queryselector, creteelement , textcontent,appendchild</h1>
+    <section id="userinfo"></section>
+    <script>
+      var users = [
+        {
+          id: 1,
+          name: "prabhat",
+          image: "https://picsum.photos/id/124/300/300",
+          email: "g@gmail.com",
+          isadmin: false,
+        },
+        {
+          id: 2,
+          name: "prabhat",
+          image: "https://picsum.photos/id/126/300/300",
+          email: "g@gmail.com",
+          isadmin: true,
+        },
+
+        {
+          id: 3,
+          name: "prabhat",
+          image: "https://picsum.photos/id/127/300/300",
+          email: "g@gmail.com",
+          isadmin: false,
+        },
+      ];
+      console.log("users=", users);
+
+      var container = document.querySelector("#userinfo");
+      users.forEach(function (val, index) {
+        // create html element
+        let card = document.createElement("div");
+        let eImage = document.createElement("img");
+        let eName = document.createElement("h3");
+        let eEmail = document.createElement("p");
+        let eisAdmin = document.createElement("p");
+        let eLink = document.createElement("a");
+
+        // add content /data to the element
+
+        eImage.src = val.image;
+        eImage.alt = "No image";
+        eName.textContent = `${val.id} ${val.name}`;
+        eEmail.textContent = val.email;
+        eisAdmin.textContent = val.isAdmin ? "Admin" : "Non-Admin";
+        eLink.href = val.image;
+        eLink.textContent = "image link";
+        eLink.target = "-blank";
+
+        card.appendChild(eImage);
+        card.appendChild(eName);
+        card.appendChild(eEmail);
+        card.appendChild(eisAdmin);
+        card.appendChild(eLink);
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

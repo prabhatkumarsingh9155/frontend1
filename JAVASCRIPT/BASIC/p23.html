@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+     <div><input type="number" id="op"> 
+      <input type="number" id="op1"> </div>
+<div>
+  <button onclick="submitop()">SUBMIT</button>
+</div>
+    </form>
+    <div id="op2"></div>
+    <script>
+      function submitop() {
+        event.preventDefault();
+        var x = document.getElementById('op').value;
+        var y = document.getElementById('op1').value;
+
+        
+        var res = Number(x)+Number(y)
+        document.getElementById("op2").innerHTML = `<h1> RESULT=  ${res}</h1>`
+      }
+    </script>
+  </body>
+</html>

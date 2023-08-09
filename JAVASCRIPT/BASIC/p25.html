@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>datatype conversation</h3>
+    <script>
+      var x = "123.3456";
+      var y = "1234.77777778484";
+
+      var a = Number(x);
+      document.write(` <h1> number =${a} </h1>`);
+      var a1 = parseInt(x);
+      document.write(`<h1> int =${a1}</h1> `);
+      var a2 = parseFloat(x);
+      var a3 = parseFloat(y);
+      document.write(`<h1> float =${a2}</h1>`);
+      document.write(`<h1> float =${a3.toFixed(2)}</h1>`);
+    </script>
+  </body>
+</html>
