@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DIGITAL CLOCK</h1>
+    <h3 id="myclock"></h3>
+
+    <script>
+      function digiclock() {
+        var today = new Date();
+        document.getElementById("myclock").innerText =
+          today.toLocaleTimeString();
+      }
+      /* timer*/
+      setInterval(function () {
+        digiclock();
+      }, 1000); /* 1000ms => 1sec*/
+    </script>
+     
+  </body>
+</html>

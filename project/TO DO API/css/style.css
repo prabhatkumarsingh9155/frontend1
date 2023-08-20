@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "", sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu #logo {
+  color: gold;
+}
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  padding: 12px 15px;
+}
+.menu a:hover,
+a:active {
+  color: orangered;
+  transition: all 0.5s;
+}
+.container {
+  position: relative;
+  margin-top: 5%;
+  width: 1009%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.container .form-container {
+  position: relative;
+  top: 50px;
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+}
+.form-container .row {
+  display: row;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 10px;
+}
+.row.form-input {
+  padding: 5px 20px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+.row .btn {
+  color: #fff;
+  border: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.row-green{
+
+
+background-color: green;
+    
+
+}
+.row-orange{
+
+
+    background-color:orangered;
+        
+    
+    }

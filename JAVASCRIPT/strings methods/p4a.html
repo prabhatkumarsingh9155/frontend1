@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>split</h1>
+    <form>
+      <div>
+        <label>eneter name (each name sepertte by comma) </label>
+        <textarea name="" id="user" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+    <script>
+      function op(e) {
+        e.preventDefault();
+        var user = document.getElementById("user").value;
+        console.log("user=", user);
+        let res = user.split(",");
+        console.log("output=", res);
+      }
+    </script>
+  </body>
+</html>

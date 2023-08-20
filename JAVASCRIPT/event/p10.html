@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ccc;
+        padding: 0;
+        margin: 0;
+      }
+
+      #con-menu {
+        position: fixed;
+        width: 150px;
+        background-color: #111;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5px;
+        visibility: hidden; /*comment this till you write the script*/
+        z-index: 10000;
+      }
+      #con-menu.items {
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.4s ease;
+      }
+      #context-menu.visible {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con-menu">
+      <a href="" class="items">NEW</a>
+      <a href="" class="items">NEW FOLDER</a>
+      <a href="" class="items">NEW FOLDER</a>
+      <a href="" class="items">NEW FOLDER</a>
+      <a href="" class="items">NEW FOLDER</a>
+      <a href="" class="items">NEW FOLDER</a>
+    </div>
+    <script>
+      const contextmenu = document.getElementById("con-menu");
+      const pagebody = document.querySelector("body");
+      pagebody.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        const { clientx: mouseX, clienty: mouseY } = e;
+
+        console.log(`x-axis=${mouseX}: y axis=${mouseY}`);
+        contextmenu.style.left = `${mouseX}px`;
+        contextmenu.style.top = `${mouseY}px`;
+        contextmenu.className.add("visible");
+        setTimeout(function () {
+          contextmenu.className.remove("visible");
+        }, 10000);
+      });
+    </script>
+  </body>
+</html>
