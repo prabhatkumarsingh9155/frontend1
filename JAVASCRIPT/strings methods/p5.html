@@ -1,37 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
- <h1> reverse the strings usings loops </h1>
- <script>
-var str ="be-practicle"
-function resersestring(data){
-var result="";
-for (var i=data.length-1; 1>=0;i--){
-result+= data[i];
-console.log(i,data[i]);
+  </head>
+  <body>
+
+    <h3>match  method </h3>
+    <script>
+      var str = "my name is prabhat kumar  is singh";
 
 
-
-}
-console.log('results=',result)
-return result;
- 
-
-
-var output =resersestring(str);
-document.write(` <h3> before =${str}</h3>`)
-document.write(` <h3> before =${output}</h3>`)
-}
-
-
-
-
-
- </script>   
-</body>
+      var a=str.match(/is/g)// g => globla search
+      
+      console.log(a);
+      document.write(a)
+      
+    </script>
+  </body>
 </html>

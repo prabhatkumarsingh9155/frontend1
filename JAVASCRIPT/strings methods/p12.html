@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,17 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-
-    <h3>indexOf method </h3>
+    <h3>split method</h3>
+    <p> check proper result in console</p>
     <script>
-      var str = "my name is prabhat kumar singh";
+      var str = "     my name is prabhat kumar singh";
 
-
-      var a=str.indexOf("prabhat")// indexof is equal to search method
-      
+      var a = str.split(); // split into array
+      var b = str.split("at");
       console.log(a);
       document.write(a)
-      
+      console.log(b);
+      document.write(b)
     </script>
   </body>
 </html>

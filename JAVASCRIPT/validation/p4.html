@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            font-weight: bold;
+
+            margin-top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <form autocomplete="off">
+        <label for="">USERNAME</label>
+        <input type="text" id="user" onkeyup="validation()" />
+        <strong id="str"></strong>
+        <br />
+        <label for="">PASSWORD</label>
+        <input type="password" id="pass" onkeyup="validation()" />
+        <strong id="str1"></strong>
+        <br />
+        <label for="">EMAIL</label>
+        <input type="email" id="email" onkeyup="validation()" />
+        <strong id="str2"></strong>
+        <br />
+        <input type="submit" />
+    </form>
+
+    <script>
+        function validation() {
+            var usser = document.getElementById("user").value;
+            var pswd = document.getElementById("pass").value;
+            var emmail = document.getElementById("email").value;
+
+            var a = document.getElementById("str");
+            var b = document.getElementById("str1");
+            var c = document.getElementById("str2");
+
+            var userregex = /^[a-zA-Z\-]+$/;
+            var passregex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            var emailregex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+            if (usser == "") {
+                a.innerHTML = "username must be filled";
+                a.style.color = "orange";
+            } else {
+                if (userregex.test(usser) === false) {
+                    a.innerHTML = " invalid username";
+                    a.style.color = "orange";
+                } else {
+                    a.innerHTML = " valid username";
+                    a.style.color = "orange";
+                }
+            }
+            if (pswd == "") {
+                b.innerHTML = "password must be filled";
+                b.style.color = "red";
+            } else {
+                if (passregex.test(pswd) == false) {
+                    b.innerHTML = " invalid password ";
+                    b.style.color = "red";
+                } else {
+                    b.innerHTML = " valid password ";
+                    b.style.color = "red";
+                }
+            }
+
+            if (emmail == "") {
+                c.innerHTML = "EMAIL must be filled";
+                c.style.color = "green";
+            } else {
+                if (emailregex.test(pswd) == false) {
+                    c.innerHTML = " invalid email ";
+                    c.style.color = "green";
+                } else {
+                    c.innerHTML = " valid email";
+                    c.style.color = "green";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

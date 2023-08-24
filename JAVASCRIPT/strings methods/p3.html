@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
- <h3> strings methods</h3>   
- <script>
-var str ="welcometojavascript";
-document.write(` <h3> ${str}</h3>`);
-document.write(` <h3>slice (start-index,end-index) method</h3>`);
-document.write(` <h3> ${str.slice(2,5)}</h3>`);
+  </head>
+  <body>
 
-document.write(` <h3> substr(start-index,length) method</h3>`);
-document.write(` <h3> ${str.substr(2,5)}</h3>`);
-document.write(` <h3> ${str.substr(9,4)}</h3>`);
-document.write(` <hr>`);
+    <h3>StartWith And EndWith</h3>
+    <script>
+      var str = " my name is prabhat kumar singh";
 
-document.write(`<h3>concat</h3>`)
-var a="raj"
-var b="kumar"
-document.write(`<h3> concate =${a.concat(b)}</h3>`)
-var e =b.trim();/* trim  the white space*/
-document.write(`<h3> concat with trim =${a.concat(e)}</h3>`)
 
- </script>
-</body>
+      var a=str.startsWith("my")
+      var b=str.endsWith("singh")
+      console.log(a);
+      document.write(a)
+      console.log(b);
+      document.write(b )
+    </script>
+  </body>
 </html>
