@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>object methods =defineProperty( object,key,{value:xx})</h3>
+
+    <script>
+      var user = {
+        name: "john",
+      };
+      // defineProperty is used to create property of object externally
+
+      Object.defineProperties(user, "email", {
+        value: "john@gmail.com",
+      });
+      Object.defineProperties(user, "age", {
+        value: 22
+      });
+
+      Object.defineProperties(user, "getEmail", {
+        value: function () {
+          document.write(`<h3> email =${this.email}</h3>`);
+        },
+      });
+      console.log("user=", user);
+      user.getEmail();
+    </script>
+  </body>
+</html>
