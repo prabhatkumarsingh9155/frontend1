@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+class User{
+constructor(){
+this.name="mohan";
+this.email="mohan@gmail.com";
+this.age=123;
+this.isAdmin=true;
+this.hobbies=['tracking','cycling','cricket'];
+this.account={
+
+bank:"SBI",
+accNo:12345,
+
+
+}
+}
+getuserInfo(){
+return this.name;
+
+
+
+}
+
+getEmail(){
+
+document.write(` <h3> my name is =${ this.email}</h3>`)
+
+
+}
+
+ 
+
+
+}
+let x=new User();
+console.log('x=',x);
+document.write(`<h1> name =${x.name}</h1>`)
+document.write(`<h1> email =${x.email}</h1>`)
+document.write(`<h1> age =${x.age}</h1>`)
+document.write(`<h1> isAdmin =${x.isAdmin}</h1>`)
+
+document.write(`<h1> method getuserinfo=${x.getuserInfo()}</h1>`)
+
+x.getEmail();
+
+x.hobbies.forEach((item,index)=>{
+
+    document.write(`<h1> ${index} ${item}</h1>`)
+
+
+
+})
+ </script>   
+</body>
+</html>

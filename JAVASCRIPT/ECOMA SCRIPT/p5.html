@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Default parameter in function (to void NaN)</h3>
+
+    <script>
+      function sum(a, b = 7) {
+        document.write(`<h3> sum=${a + b}</h3>`);
+      }
+      sum(23, 40);
+      sum(40);
+
+      
+
+function mul(a, b = 7, c = 4) {
+    document.write(`<h3> mul=${a * b * c}</h3>`);
+  }
+  mul(23, 40, 5);
+  mul(40, 5);
+  mul (6);
+
+
+
+
+
+</script>
+  </body>
+</html>

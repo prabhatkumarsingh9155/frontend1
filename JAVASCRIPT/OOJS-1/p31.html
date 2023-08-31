@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>private member Inside the class</h1>
+
+    <script>
+      class company {
+        constructor() {
+          const emp = []; // private member;
+
+          // setter methods
+          this.addemp = function (val) {
+            emp.push(val);
+            return emp;
+          };
+          //getter methiods
+          this.getemp = function () {
+            return emp.shift();
+          };
+        }
+      }
+
+      let x= new company();
+      console.log('instance x =',x);
+      // public member to add values
+      x.addemp('john')
+      x.addemp('robert')
+      x.addemp('willian')
+
+console.log('first=',x.getemp())
+console.log('second=',x.getemp())
+console.log('thirds=',x.getemp())
+
+
+      
+    </script>
+  </body>
+</html>

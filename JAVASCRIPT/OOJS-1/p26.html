@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1>super key</h1>
+    <script>
+      // super class
+      class Material {
+        constructor(x, y) {
+          this.bric = x;
+          this.cement = y;
+        }
+
+        getcoursedatainfo() {
+          return `material info brics= ${this.bric} and cement=${this.cement}`;
+        }
+      }
+
+      // basic class
+      class building extends Material {
+        constructor(a, b, c) {
+          super(a, b);
+          this.sand = c;
+        }
+        getcoursedatainfo() {
+          document.write(`<h1> ${super.getcoursedatainfo()}</h1>`);
+          return `sand  info = ${this.sand} loads`;
+        }
+      }
+
+      let p = new building(300, 20, 2);
+      document.write(`<h1>${p.getcoursedatainfo()}</h1>`);
+    </script>
+  </body>
+</html>

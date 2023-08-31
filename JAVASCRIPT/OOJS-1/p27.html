@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      class company {
+        constructor(x, y) {
+          this.empid = x;
+          this.gmpid = y;
+        }
+        getEMPinfo() {
+          
+            document.write(` <h1> employed id =${this.empid} and designation=${this.gmpid}</h1>`);
+        
+        }
+      }
+
+      class EMP extends company {
+        constructor(na, em, id, de) {
+          super(id, de);
+          this.name = na;
+          this.email = em;
+        }
+        getEMPinfo() {
+          super.getEMPinfo();
+          document.write(
+            ` <h1> name is =${this.name} and email=${this.email}</h1>`
+          );
+        }
+      }
+
+      let x =new company('ram','ram@gmail.com','')
+    </script>
+  </body>
+</html>

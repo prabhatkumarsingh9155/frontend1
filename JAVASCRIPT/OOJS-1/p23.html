@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Course {
+        constructor(title, dur) {
+          document.write(` <h3> constructor called </h3>`);
+
+          this.title = title;
+          this.duration = dur;
+        }
+        // static method
+        static print(val) {
+          document.write(`<h1> this is static methods </h1>`);
+          document.write(`<h1> this is property title= ${this.title} </h1>`);
+          document.write(`<h1> this is parameter title= ${val} </h1>`);
+        }
+
+        Courseinfo() {
+          document.write(`<h1> ${this.title}${this.duration} </h1>`);
+        }
+      }
+
+      Course.print("be-practical");
+      let x = new Course("javascript", "1month");
+      x.Courseinfo();
+    </script>
+  </body>
+</html>

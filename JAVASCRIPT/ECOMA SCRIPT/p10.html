@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>arry join-> object array (spread)</h1>
+
+    <script>
+      let c1 = [
+        {
+          id: 123,
+          name: "prabhat",
+          email: "prabhat@gmail.com",
+        },
+
+        {
+          id: 124,
+          name: "prabhat kumar",
+          email: "prabhatkumar@gmail.com",
+        },
+        {
+          id: 125,
+          name: "prabhatkumarsingh",
+          email: "prabhatkumarsingh@gmail.com",
+        },
+
+        {
+          id: 787,
+          name: "goldi",
+          email: "goldi@gmail.com",
+        },
+        {
+          id: 987,
+          name: "op",
+          email: "op@gmail.com",
+        },
+      ];
+
+      let c2 = [
+        {
+          id: 123,
+          name: "prabhat",
+          email: "prabhat@gmail.com",
+        },
+
+        {
+          id: 124,
+          name: "prabhat kumar",
+          email: "prabhatkumar@gmail.com",
+        },
+      ];
+
+      let c3 = [
+        {
+          id: 123,
+          name: "prabhat",
+          email: "prabhat@gmail.com",
+        },
+        ...c1,
+        ...c2,
+      ];
+
+      console.log("c1=", c1);
+      console.log("c2=", c2);
+      console.log("c3=", c3);
+    </script>
+  </body>
+</html>
