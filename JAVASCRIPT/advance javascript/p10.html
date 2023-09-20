@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>proxy constructor</h1>
+
+    <p>new proxy( target,handler)</p>
+
+    <p>target=> object/fuction/url which we want to proxy</p>
+    <p>handler=> callback fuction</p>
+
+    <script>
+      let user = {
+        name: "john",
+        age: 23,
+        isActive: true,
+      };
+
+      const handler = {
+        get: function (obj, prop) {
+          return obj[prop] ? obj[prop] : "requested property not exists";
+        },
+      };
+
+      const pr = new Proxy(user, handler);
+
+      console.log(`name=`, pr.name);
+      console.log(`name=`, pr.email);
+    </script>
+  </body>
+</html>

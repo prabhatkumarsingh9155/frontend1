@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>find the square root and cube root of the number</h1>
+    <p>math.sqrt(n) and math.cbrt(n)</p>
+    <p>all positive number</p>
+    <p>all negative numbers</p>
+
+    <form autocomplete="off" onsubmit="submitHandler(event)">
+      <div>
+        <label for="num">enter Input number</label>
+        <input type="number" name="num" id="num" required />
+      </div>
+
+      <div>
+        <label for="op">operation</label>
+        <select name="op" id="op">
+          <option value="null">choose operation</option>
+          <option value="goldi">square root</option>
+          <option value="cbrt">cube root</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+    <hr />
+    <div id="output"></div>
+    <script src="./p1.js"></script>
+  </body>
+</html>

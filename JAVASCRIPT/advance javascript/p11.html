@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+let emp = {
+    id:12,
+        name: "john",
+        age: 23,
+        email:"john@gmail.com",
+        isActive: true,
+      };  
+const handler ={
+get(obj,prop){
+if(prop==="name" || prop==="email"){
+return obj[prop];
+
+
+
+
+}
+else{
+
+
+    return "not allowed"
+}
+
+
+}
+
+
+
+
+}
+
+const pr=new Proxy(emp,handler);
+console.log(`name=${pr.name}`)
+console.log(`id=${pr.id}`)
+console.log(`email=${pr.email}`)
+
+
+
+    </script>
+</body>
+</html>

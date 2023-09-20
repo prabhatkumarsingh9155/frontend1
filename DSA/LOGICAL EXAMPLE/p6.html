@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>convert km to miles(1km =0.6213miles)</h3>
+    <input type="submit" onclick="submit()" />
+    <strong id="output"></strong>
+
+    <script>
+      function submit() {
+        let op = document.getElementById("output");
+        let a = prompt("enter the number");
+        let b = 0.6213;
+
+        let c = a * b.toFixed(2);
+
+        op.innerHTML = `${a}km =${c}miles`;
+      }
+    </script>
+  </body>
+</html>

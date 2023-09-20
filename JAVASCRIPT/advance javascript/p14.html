@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">
+                <button class="btn-info">add user</button>
+              </th>
+            </tr>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>email</th>
+              <th>age</th>
+              <th>action</th>
+            </tr>
+          </thead>
+          <tbody id="userInfo"></tbody>
+        </table>
+      </div>
+
+      <dialog id="userDialog">
+        <button id="close" class="btn-danger">x</button>
+        <div class="form">
+          <form action="" autocomplete="off" onsubmit="submitHandler(event)">
+            <div>
+              <label for="name">name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div>
+              <label for="email">email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+              <label for="age">age</label>
+              <input type="number" name="age" id="age" required />
+            </div>
+            <div>
+              <button type="submit" class="btn-success">add new users</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </div>
+
+    <script>
+      let op = document.getElementById("open");
+      let cls = document.getElementById("close");
+      let dig = document.getElementById("userDialog");
+
+      op.addEventListener("click", (e) => {
+        dig.show();
+      });
+      cls.addEventListener("click", (e) => {
+        dig.close();
+      });
+
+      // form
+
+      let fname = document.getElementById("name");
+      let femail = document.getElementById("email");
+      let fage = document.getElementById("age");
+
+      const genRand = () => Math.floor(Math.random() * 10000);
+      const submitHandler = async (e) => {
+        e.preventDefault();
+        let newUser = {
+          id: "genRand()",
+          name: fname.value,
+          email: femail.value,
+          age: fage.value,
+        };
+        console.log("new user=", newUser);
+      };
+    </script>
+  </body>
+</html>

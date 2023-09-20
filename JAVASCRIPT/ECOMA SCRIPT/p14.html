@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>map() constractor</h3>
+
+    <script>
+      var x = new Map(); // ref // instance
+
+      x.set("id", 1232);
+      x.set("title", "javascript");
+      x.set("duration", "1month");
+      console.log("set x=", x);
+
+      for (let item of x) {
+        console.log(item); // array [key ,value]
+      }
+      for (let item of x.keys) {
+        console.log("keys", item); //key
+      }
+      for (let [key, val] of x) {
+        console.log(` key=${key}and val=${val}`);
+      }
+    </script>
+  </body>
+</html>
