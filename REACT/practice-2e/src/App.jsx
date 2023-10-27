@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import './App.css'
 import { Route, Routes,BrowserRouter ,useNavigate, Navigate} from "react-router-dom"
 import Ex1 from "./Component/Ex1.jsx";
@@ -9,9 +9,9 @@ import Service from './Component/Service';
 import Support from './Component/Support';
 import Contact from './Component/Contact';
 
-
+import Contact from "./Component/Contact";
 function App() {
-  
+
   return (
     <>
     <BrowserRouter>

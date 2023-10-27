@@ -22,6 +22,8 @@ const Ex1 = () => {
             <li>Integrity</li>
         </ul>
 
+        
+
         <Link to={'/home/service'} state={{name:"gopi",age:12}}>SERVICE</Link>
         
 
