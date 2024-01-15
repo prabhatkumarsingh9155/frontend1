@@ -9,7 +9,7 @@ import Service from './Component/Service';
 import Support from './Component/Support';
 import Contact from './Component/Contact';
 
-import Contact from "./Component/Contact";
+
 function App() {
 
   return (

@@ -9,10 +9,17 @@ import "bootstrap/dist/js/bootstrap.bundle"
 
 import "bootstrap-icons/font/bootstrap-icons.css"
 
+import DataProvider from './Context/DataContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+
+  <DataProvider>
+
+  <App />
+  </DataProvider>
+   
   </React.StrictMode>
 );
 

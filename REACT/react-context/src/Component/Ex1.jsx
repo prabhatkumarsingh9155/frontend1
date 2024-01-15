@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { DataContext } from "../Context/DataContext";
 
-const Ex1 = () => {
+const Ex1 = (props) => {
+  const context = useContext(DataContext);
+
   return (
-    <div>
-     
-    </div>
-  )
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 text-center">
+          <h3 className="display-3 text-success">Example</h3>
+
+
+        </div>
+      </div>
+      <div className="row">
+{
+post && posts.map((item,index)=>{
+return <PostItem key ={index} {...item}/>
+
+})
+
+
 }
 
-export default Ex1
+      </div>
+    </div >
+  );
+};
+
+export default Ex1;
